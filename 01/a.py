@@ -1,11 +1,8 @@
 #!/usr/bin/python3
+import sys
 
 summ = 0
-while True:
-    try:
-        i = input()
-    except EOFError:
-        break
-    sum += int(i) // 3 - 2
+for line in sys.stdin.readlines():
+    sum += int(line) // 3 - 2
 
 print(summ)
